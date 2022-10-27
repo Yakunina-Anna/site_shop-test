@@ -1,0 +1,59 @@
+.feature {
+   &__inner {
+      margin-top: 95px;
+      background: $feature;
+      padding: 100px;
+      min-height: 341px;
+      @include media("max", "sm") {
+         margin-top: 65px;
+         min-height: 601px;
+         padding: 0;
+         padding-top: 48px;
+      }
+      @include media("max", "xs") {
+         margin-top: 96px;
+      }
+   }
+
+   &__items {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      @include media("max", "sm") {
+         display: block;
+      }
+   }
+
+   &__item {
+      flex: 0 360px;
+      text-align: center;
+      margin-right: 30px;
+      @include media("max", "sm") {
+         margin: 0 auto 48px auto;
+         max-width: 360px;
+      }
+   }
+
+   &__img {
+      width: 45px;
+      height: 45px;
+   }
+
+   &__title {
+      color: $f-text;
+      font-size: 20px;
+      margin-top: 28px;
+      margin-bottom: 16px;
+      font-weight: 400;
+      margin-top: 10px;
+      line-height: 23.95px;
+   }
+   &__desc {
+      color: $f-text;
+      font-weight: 100;
+      font-size: 14px;
+      line-height: 17px;
+   }
+}

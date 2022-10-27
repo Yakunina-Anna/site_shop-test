@@ -1,0 +1,343 @@
+.product-info,
+.filter {
+   &__inner {
+      text-align: center;
+      position: relative;
+      background: #fff;
+      margin-top: -65px;
+      border: 1px solid #eaeaea;
+      @include media("max", "sm") {
+         margin-top: 0;
+         border: 0;
+      }
+   }
+
+   &__title {
+      font-size: 14px;
+      line-height: 17px;
+      color: #f16d7f;
+      font-weight: 300;
+      padding-top: 24px;
+      @include media("max", "sm") {
+         padding-top: 64px;
+      }
+   }
+
+   &__sort {
+      display: flex;
+      justify-content: space-between;
+      max-width: 370px;
+      margin-bottom: 48px;
+      &--center {
+         margin: 0 auto;
+         margin-bottom: 48px;
+         @include media("max", "xs") {
+            padding-bottom: 64px;
+            & summary {
+               font-size: 12px;
+            }
+         }
+         & svg {
+            margin-left: 11px;
+         }
+      }
+   }
+
+   &__arrow {
+      margin-left: 9px;
+   }
+
+   &__line {
+      width: 63px;
+      height: 3px;
+      background-color: $pag-color;
+      border: none;
+      margin: 12px auto;
+   }
+
+   &__text {
+      font-size: 18px;
+      text-transform: uppercase;
+      line-height: 22px;
+      color: $text;
+   }
+
+   &__desc {
+      max-width: 555px;
+      width: 100%;
+      color: #5e5e5e;
+      margin: 48px auto 32px auto;
+      line-height: 16px;
+   }
+
+   &__long-line {
+      border-bottom: 1px solid #eaeaea;
+      border-radius: 30px;
+      margin: 65px auto;
+      max-width: 640px;
+   }
+
+   &__price {
+      font-size: 24px;
+      line-height: 28px;
+      color: $pag-color;
+   }
+
+   &__btn {
+      display: flex;
+      outline: 1px solid #f16d7f;
+      width: 212px;
+      padding: 12px;
+      transition: all 0.5s ease;
+      color: #f26376;
+      align-items: center;
+      justify-content: center;
+      margin: 48px auto 64px auto;
+      &--white-text {
+         &:hover .product-info__link--white {
+            color: $body;
+            transition: all 1s;
+         }
+      }
+      @include media("max", "sm") {
+         margin-top: 16px;
+      }
+   }
+
+   &__link--white {
+      color: #f16d7f;
+   }
+
+   // &__link {
+   //    color: $pag-color;
+   //    &:hover {
+   //       color: $body;
+   //    }
+   // }
+
+   &__icon-cart {
+      fill: $button;
+      transition: all 0.5s ease;
+      margin-right: 22px;
+   }
+
+   &__filter-text {
+      font-weight: 600;
+      font-size: 14px;
+   }
+
+   &__icon-filter {
+      fill: #000;
+      margin-left: 11px;
+   }
+}
+
+.filter {
+   &__inner {
+      border: 0;
+      margin: 51px auto 64px auto;
+      @include media("max", "xs") {
+         margin-top: 20px;
+      }
+   }
+
+   &__sort-toggle {
+      position: relative;
+      box-sizing: border-box;
+      max-width: 360px;
+      &[open] > summary {
+         color: $pag-color;
+         outline: none;
+         border: none;
+         @include media("max", "xs") {
+            font-size: 12px;
+         }
+         svg {
+            fill: #ef5b70;
+         }
+      }
+   }
+
+   & details[open] summary ~ .filter__content {
+      -webkit-animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+      animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+   }
+
+   &__sort-content {
+      & svg {
+         margin-left: 11px;
+      }
+   }
+
+   &__side {
+      max-width: 296px;
+      width: 100%;
+   }
+
+   &__filter-text {
+      margin-left: 16px;
+      position: relative;
+      z-index: 9999;
+      @include media("max", "xs") {
+         margin-left: 0;
+      }
+   }
+
+   &__content {
+      position: absolute;
+      background-color: $body;
+      width: 360px;
+      left: 0;
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      z-index: 999;
+      margin-top: -31px;
+      padding-top: 48px;
+      @include media("max", "xs") {
+         top: 180px;
+      }
+      summary {
+         text-align: left;
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 17px;
+         color: #ef5b70;
+         position: relative;
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         border-left: 5px solid #ef5b70;
+         border-bottom: 1px solid #ebebeb;
+         padding: 10px;
+         margin-bottom: 24px;
+         margin-left: 17px;
+      }
+   }
+
+   &__list {
+      text-align: left;
+      padding: 0 24px 24px 24px;
+   }
+
+   &__item {
+      margin-bottom: 11px;
+   }
+
+   &__link {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: $menu-link;
+      padding-left: 9px;
+   }
+
+   &__sort {
+      display: flex;
+      justify-content: space-between;
+      max-width: 685px;
+      @include media("max", "sm") {
+         max-width: 736px;
+      }
+   }
+
+   &__filter-text {
+      font-weight: 600;
+      font-size: 14px;
+      @include media("max", "sm") {
+         margin: 0;
+      }
+   }
+
+   &__filter-descr {
+      @include media("max", "xs") {
+         display: none;
+      }
+   }
+
+   &__icon-filter {
+      fill: #000;
+      margin-left: 11px;
+      width: 15px;
+      height: 10px;
+      @include media("max", "xs") {
+         margin-left: 0;
+         width: 37px;
+         height: 25px;
+      }
+   }
+
+   &__side {
+      display: flex;
+      justify-content: space-between;
+   }
+}
+
+.filter__content--small {
+   width: 100%;
+   padding-top: 11px;
+   margin-top: 0;
+   padding-bottom: 11px;
+   min-width: 79px;
+   @include media("max", "xs") {
+      min-width: 79px;
+      border-radius: 5px;
+      position: relative;
+      top: 0;
+   }
+   .filter__small-list {
+      padding: 0;
+   }
+   label {
+      display: flex;
+      align-items: center;
+      padding: 3px 30px 3px 9px;
+   }
+}
+
+.product-info__btn {
+   &:hover {
+      background-color: $button;
+      color: $body;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+   }
+   &:hover .product-info__btn-icon-cart {
+      fill: $body;
+      transition: all 0.5s ease;
+   }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-8-4 1:0:31
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in-left {
+   0% {
+      -webkit-transform: translateX(-50px);
+      transform: translateX(-50px);
+      opacity: 0;
+   }
+   100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+@keyframes fade-in-left {
+   0% {
+      -webkit-transform: translateX(-50px);
+      transform: translateX(-50px);
+      opacity: 0;
+   }
+   100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+   }
+}

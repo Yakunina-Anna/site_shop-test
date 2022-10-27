@@ -1,0 +1,110 @@
+.registration {
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 64px;
+      margin-bottom: 96px;
+      @include media("max", "xs") {
+         display: block;
+         margin: 0 auto;
+         margin-bottom: 96px;
+         margin-top: 40px;
+      }
+   }
+
+   &__form {
+      margin-right: 22px;
+   }
+
+   &__inner {
+      &--wide {
+         @include media("max", "md") {
+            margin-bottom: 0;
+         }
+         @include media("max", "xs") {
+            max-width: 100%;
+         }
+      }
+   }
+   &__right-side {
+      max-width: 652px;
+   }
+
+   &__title {
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 22px;
+      line-height: 28px;
+      @include media("max", "sm") {
+         font-size: 16px;
+         line-height: 19px;
+      }
+   }
+
+   &__text {
+      font-size: 24px;
+      margin-bottom: 22px;
+      line-height: 28px;
+      @include media("max", "sm") {
+         font-size: 16px;
+         line-height: 19px;
+      }
+   }
+
+   &__list {
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 22px;
+      line-height: 28px;
+   }
+
+   &__item {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      @include media("max", "sm") {
+         margin-bottom: 26px;
+         font-size: 16px;
+         line-height: 19px;
+      }
+      &::before {
+         content: "";
+         background-image: url(../img/check.png);
+         width: 20px;
+         height: 16px;
+         margin-right: 20px;
+         vertical-align: middle;
+      }
+   }
+
+   &__btn {
+      border: 0;
+      padding: 16px 44px;
+      text-align: left;
+      margin: initial;
+      margin-top: 40px;
+      width: 167px;
+      padding: 16px 29px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include media("max", "xs") {
+         margin-bottom: 40px;
+      }
+      &:hover .registration__arrow-btn {
+         transition: 1s;
+         color: $desc;
+      }
+   }
+
+   &__arrow-btn {
+      color: $body;
+      transition: 1s;
+   }
+}
+
+.registration .form {
+   &__inner {
+      margin-top: 0;
+   }
+}

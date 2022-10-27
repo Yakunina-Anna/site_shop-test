@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+//Переменные
+@import "_var.scss";
+
+// Примеси Миксины
+@import "_mixins.scss";
+
+// Базовые стили
+@import "_main.scss";
+
+// Шапка
+@import "blocks/header";
+
+// Heading
+@import "blocks/preview";
+
+// Категории
+@import "blocks/category";
+
+// Карточки товаров
+@import "blocks/products";
+
+// Преимушества
+@import "blocks/features";
+
+// Футер
+@import "blocks/footer";
+
+// Хлебные крошки
+@import "blocks/breadcrumb";
+
+// Пагинация
+@import "blocks/pagination";
+
+// Слайдер
+@import "blocks/slider";
+
+// Продукт инфо и фильтр
+@import "blocks/product-info-filter";
+
+// page cart
+@import "blocks/product-cart";
+
+// form
+@import "blocks/form";
+
+// registration
+@import "blocks/registration";

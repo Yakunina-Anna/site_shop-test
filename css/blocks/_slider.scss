@@ -1,0 +1,32 @@
+.slider {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   &__item {
+      width: 100%;
+   }
+   &__img {
+      width: 100%;
+      height: 100%;
+      min-height: 777px;
+      object-fit: cover;
+      @include media("max", "sm") {
+         min-height: 624px;
+      }
+   }
+
+   &__btn {
+      font-size: 21px;
+      background-color: rgba(42, 42, 42, 0.15);
+      width: 47px;
+      height: 47px;
+      position: absolute;
+   }
+   &__btn-left {
+      left: 0;
+   }
+   &__btn-right {
+      right: 0;
+   }
+}

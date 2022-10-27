@@ -1,0 +1,49 @@
+.breadcrumb {
+   min-height: 148px;
+   background-color: $context;
+   display: flex;
+   align-items: center;
+   margin-top: 75px;
+   padding: 0 16px;
+   @include media("max", "sm") {
+      padding: 0;
+   }
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      @include media("max", "xs") {
+         justify-content: center;
+         flex-direction: column;
+         text-align: center;
+      }
+   }
+
+   &__title {
+      line-height: 28.8px;
+      font-size: 24px;
+      font-weight: 400;
+      color: $desc;
+      @include media("max", "xs") {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__link {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16.8px;
+      color: $context-link;
+   }
+   &__link--active {
+      font-weight: 700;
+      color: $desc;
+   }
+}
+
+.breadcrumb {
+   &__link:not(:first-child):before {
+      content: "/";
+      margin: 0 5px;
+   }
+}

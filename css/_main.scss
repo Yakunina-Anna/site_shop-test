@@ -1,0 +1,111 @@
+summary {
+   display: block;
+   @include media("max", "xs") {
+      font-size: 12px;
+   }
+}
+
+::-webkit-details-marker {
+   display: none;
+}
+
+details [open] .filter__list {
+   animation: slide 0.5s ease-in-out;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+}
+
+ul,
+ol {
+   list-style: none;
+}
+
+.container {
+   max-width: 1140px;
+   margin: 0 auto;
+   width: 100%;
+   // max-width: calc(1140px - 16px * 2);
+   @include media("max", "sm") {
+      max-width: 768px;
+      padding: 0 16px;
+   }
+   @include media("max", "xs") {
+      padding: 0 8px;
+   }
+}
+
+.hidden {
+   visibility: hidden;
+   position: absolute;
+   left: -999999px;
+   width: 1px;
+   height: 1px;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   // min-height: 100vh;
+   min-height: 100%;
+}
+
+.main {
+   flex: 1 1 auto;
+}
+
+html,
+body {
+   font-size: 14px;
+   font-weight: 300;
+   font-family: "Lato", sans-serif;
+   height: 100%;
+   min-width: 375px;
+   background: $body;
+   line-height: 1.6;
+   box-sizing: border-box;
+   overflow-anchor: none;
+}
+
+button {
+   border: none;
+   background: none;
+   cursor: pointer;
+   font-size: 14px;
+}
+
+.overlay {
+   position: absolute;
+   background: $dark-overlay;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1;
+   bottom: 0;
+}
+
+.white-overlay {
+   position: absolute;
+   background: $white-overlay;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1;
+   bottom: 0;
+}
+
+@keyframes slide {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}

@@ -1,0 +1,145 @@
+.category {
+   &__inner {
+      margin-top: 64px;
+      @include media("max", "sm") {
+         margin-top: 20px;
+      }
+      @include media("max", "xs") {
+         margin-top: 64px;
+      }
+   }
+
+   &__heading {
+      color: $fe-title;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: center;
+   }
+
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+
+   &__item-wrap {
+      position: relative;
+      overflow: hidden;
+      width: 31.6%;
+      min-height: 260px;
+      @include media("max", "sm") {
+         min-height: 167px;
+      }
+      @include media("max", "xs") {
+         width: 100%;
+         margin: 0 auto 30px auto;
+         height: 243px;
+      }
+      &--item-accesories {
+         width: 100%;
+         margin-top: 30px;
+         min-height: 180px;
+         @include media("max", "sm") {
+            min-height: 116px;
+         }
+         @include media("max", "xs") {
+            max-height: 111px;
+            margin-top: 0;
+            min-height: 111px;
+         }
+      }
+   }
+
+   &__item {
+      padding: 0;
+      position: relative;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 0.5s;
+      &:hover {
+         transform: scale(1.2);
+      }
+      &:hover .category__text {
+         transform: scale(0.7);
+         color: $desc;
+      }
+
+      &:hover .category__title {
+         transform: scale(1);
+         color: $body;
+      }
+      @include media("max", "xs") {
+         margin-bottom: 32px;
+         min-height: 243px;
+         &:hover {
+            transform: scale(1.1);
+         }
+      }
+   }
+   &__item-women {
+      background-image: url(../img/r-card-1.jpg);
+   }
+   &__item-men {
+      background-image: url(../img/r-card-2.jpg);
+   }
+   &__item-kids {
+      background-image: url(../img/r-card-3.jpg);
+   }
+
+   &__item-accesories {
+      background-image: url(../img/rectangle-bg.jpg);
+      max-height: 180px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      @include media("max", "sm") {
+         max-height: 116px;
+      }
+      @include media("max", "xs") {
+         min-height: 111px;
+         margin-top: 0;
+      }
+   }
+
+   .category__item:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $dark-overlay;
+      opacity: 1;
+      z-index: 0;
+   }
+
+   &__text {
+      font-size: 16px;
+      font-weight: 400;
+      color: $body;
+      z-index: 2;
+      transition: 0.5s;
+   }
+
+   &__title {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: $desc;
+      display: block;
+      font-weight: 700;
+      line-height: 28.8px;
+      z-index: 2;
+      transition: 0.5s;
+   }
+}
